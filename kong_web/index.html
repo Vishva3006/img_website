@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Image</title>
+    <style>
+        /* This CSS targets the entire HTML page and the body */
+        html, body {
+            height: 100%; /* Make sure the HTML and body elements take up the full height of the viewport */
+            margin: 0; /* Remove default margins around the body */
+            overflow: hidden; /* Prevent scrollbars unless content is added later */
+        }
+
+        /* This CSS sets up the full-screen background image */
+        body {
+            /* 1. Set the background image and its path */
+            
+            background-color: black;
+            /* 2. Configure how the image is displayed */
+            background-repeat: no-repeat; /* Prevent the image from tiling */
+            background-position: center center; /* Center the image in the viewport */
+            background-attachment: fixed; /* Keep the image fixed in place when scrolling (though we disable scrolling here) */
+            
+            /* 3. The most important line: ensure the image covers the entire viewport */
+            background-size: cover;
+            
+            /* Center content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="img.jpg" alt="Image"  style="width: 400px; height: 520px;">
+</body>
+</html>
